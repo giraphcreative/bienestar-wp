@@ -1,0 +1,38 @@
+
+
+.content-two-column {
+    @include padding;
+    
+    .column-one, .column-two {
+        @extend .content-style;
+    }
+
+    @include respond-to( $bp-m ) {
+        .content-columns {
+            display: flex;
+
+            .column-one {
+                flex: 1;
+                padding-right: 2.5%;
+            }
+
+            .column-two {
+                flex: 1;
+                padding-left: 2.5%;
+            }
+        }
+    }
+
+    &.no-pad {
+        @include padding-side( 0, 0 );
+    }
+
+    &.no-pad-top {
+        @include padding-side( 0, 30px );
+    }
+
+    &.no-pad-bottom {
+        @include padding-side( 30px, 0 );
+    }
+}
+

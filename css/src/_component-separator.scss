@@ -1,0 +1,57 @@
+
+
+.separator {
+    height: 0px;
+    background: $grey;
+    position: relative;
+    z-index: 1999;
+
+    &.medium {
+        height: 15px;
+    }
+
+    &.large {
+        height: 30px;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        height: 10px;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        background: url(../img/border-grey-top.png) top center / cover no-repeat;
+        z-index: 2000;
+    }
+
+    &:after {
+        position: absolute;
+        content: "";
+        height: 10px;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        background: url(../img/border-grey-bottom.png) bottom center / cover no-repeat;
+        z-index: 2000;
+    }
+
+    &.cyan {
+        background: $cyan;
+        &:before { background-image: url(../img/border-cyan-top.png); }
+        &:after { background-image: url(../img/border-cyan-bottom.png); }
+    }
+
+    &.lime {
+        background: $lime;
+        &:before { background-image: url(../img/border-lime-top.png); }
+        &:after { background-image: url(../img/border-lime-bottom.png); }
+    }
+
+    &.sea {
+        background: $sea;
+        &:before { background-image: url(../img/border-sea-top.png); }
+        &:after { background-image: url(../img/border-sea-bottom.png); }
+    }
+}
+

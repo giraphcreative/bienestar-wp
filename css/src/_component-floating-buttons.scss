@@ -1,0 +1,45 @@
+
+
+.floating-buttons {
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+    height: 0;
+    top: 0;
+    margin-right: -5px;
+
+    @include respond-to( $bp-s ) {
+        text-align: right;
+        padding-right: 10px;
+        margin-right: 0;
+    }
+
+   @include respond-to( $bp-xxl ) {
+        padding-right: 60px;
+    }
+
+    .btn {
+        margin-right: 5px;
+        font-size: 1em;
+        padding-top: 20px;
+        padding-bottom: 5px;
+
+        @include respond-to( $bp-s ) {
+            margin-right: 10px;
+        }
+    }
+
+    &.languages {
+        top: 0;
+        height: 30px;
+        
+        .btn {
+            padding-top: 12px;
+        }
+
+        @include respond-to( $bp-s ) {
+            height: 0;
+        }
+    }
+}
+

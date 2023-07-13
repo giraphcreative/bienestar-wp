@@ -1,0 +1,54 @@
+
+
+.page-header {
+    position: relative;
+    background: center center / cover no-repeat;
+    height: 350px;
+
+    @include respond-to( $bp-m ) {
+        height: 450px;
+        background: right center / contain no-repeat;
+    }
+
+    .page-header-content {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        backdrop-filter: grayscale(100%);
+        @include padding;
+
+        background: $grey;
+        background: linear-gradient( 90deg, rgba( $grey, 1 ) 0%, rgba( $grey, 1 ) 50%, rgba( $grey, .3 ) 100% );
+
+        .page-header-content-inner {
+            flex: 1;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 3.5em;
+            line-height: 1.3em;
+            text-transform: uppercase;
+            color: white;
+
+            @include respond-to( $bp-m ) {
+                font-size: 4.5em;
+            }
+
+            @include respond-to( $bp-l ) {
+                font-size: 6em;
+            }
+
+            @include respond-to( $bp-xl ) {
+                font-size: 7em;
+            }
+        }
+    }
+}
+

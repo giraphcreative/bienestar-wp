@@ -1,0 +1,186 @@
+
+
+.content-style {
+	h2 {
+		display: inline-block;
+		margin-bottom: 15px;
+		letter-spacing: -1px;
+		color: $sea;
+		position: relative;
+		@include font-bold;
+
+		// special padding and margins for h2s in the content
+		padding: 5px 10px 5px 30px;
+		margin-left: -30px;
+
+		@include respond-to( $bp-l ) { 
+			padding: 5px 20px 5px 50px;
+			margin-left: -50px;
+		}
+		@include respond-to( $bp-xl ) {
+			padding: 5px 30px 5px 70px;
+			margin-left: -70px;
+		}
+		@include respond-to( $bp-xxl ) {
+			padding: 5px 30px 5px 90px; 
+			margin-left: -90px;
+		}
+		
+		// base colors
+		background: $grey;
+		color: white;
+		&:before {
+			position: absolute;
+			content: '';
+			top: -10px;
+			left: 0;
+			height: 10px;
+			width: 100%;
+			background: url(../img/border-grey-top.png) top center / cover no-repeat;
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			bottom: -10px;
+			left: 0;
+			height: 10px;
+			width: 100%;
+			background: url(../img/border-grey-bottom.png) top center / cover no-repeat;
+		}
+		
+		&.sea {
+			background: $sea;
+			&:before { background: url(../img/border-sea-top.png) top center / cover no-repeat; }
+			&:after { background: url(../img/border-sea-bottom.png) top center / cover no-repeat; }
+		}
+		
+		&.cyan {
+			background: $cyan;
+			&:before { background: url(../img/border-cyan-top.png) top center / cover no-repeat; }
+			&:after { background: url(../img/border-cyan-bottom.png) top center / cover no-repeat; }
+		}
+		
+		&.lime {
+			background: $lime;
+			color: $sea;
+			&:before { background: url(../img/border-lime-top.png) top center / cover no-repeat; }
+			&:after { background: url(../img/border-lime-bottom.png) top center / cover no-repeat; }
+		}
+	}
+
+	ol, ul {
+		padding: 5px 0 5px 35px;
+
+		li {
+			padding: 3px 0;
+			line-height: 1.5em;
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+
+	blockquote {
+		padding: 0 25px;
+		@include font-italic;
+		font-size: 1.2em;
+		line-height: 1.5em;
+		color: $grey;
+		border-left: 3px solid lighten( $grey-light, 30% );
+		margin: 10px 0 10px 20px;
+	}
+
+	hr {
+		border: 0;
+		border-bottom: 3px solid lighten( $grey-light, 30% );
+		padding: 0;
+		margin: 10px 0;
+		
+		@include respond-to( $bp-s ) {
+			margin: 20px 0;
+		}
+		
+		@include respond-to( $bp-l ) {
+			margin: 30px 0;
+		}
+	}
+
+	.postmeta {
+		margin-top: 15px;
+		padding: 15px 0;
+		border-top: 1px solid #ccc;
+	}
+
+	.quiet {
+		color: #999;
+		font-style: italic;
+
+		a {
+			color: #777;
+		}
+	}
+
+	table {
+		width: 100%;
+
+		tr {
+			td {
+				vertical-align: top;
+				padding: 6px 10px;
+			}
+		}
+	}
+}
+
+
+.container {
+	min-width: 320px;
+	max-width: 1440px;
+	margin: 0 auto;
+	background: white;
+	box-shadow: 0 0 50px rgba( $sea, .2 );
+	border: 1px solid rgba( $sea, .2 );
+	border-top: 0;
+	border-bottom: 0;
+	z-index: 100;
+}
+
+
+.wrap {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+
+.content-wide {
+	@include clearfix;
+	@extend .content-style;
+	@include padding;
+
+	@include respond-to( $bp-xl ) {
+		padding-top: 40px;
+		padding-bottom: 60px;
+	}
+
+	.quarter, .three-quarter {
+		padding: 0;
+	}
+
+	@include respond-to( $bp-m ) {
+		.quarter {
+			width: 23%;
+			margin: 0 2% 0 0;
+		}
+
+		.three-quarter {
+			width: 75%;
+			margin: 0;
+		}
+	}
+}
+

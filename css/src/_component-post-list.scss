@@ -1,0 +1,88 @@
+
+
+.post-list-container {
+    @include padding;
+    @extend .content-style;
+    background: white url(../img/bg-topo-grey.png) center center / cover no-repeat;
+    background-attachment: fixed;
+
+    .post-list-title {
+
+    }
+
+    .post-list {
+
+        @include respond-to( $bp-m ) {
+            margin: 0 -30px;
+            @include respond-to( $bp-l ) { margin: 0 -50px; }
+            @include respond-to( $bp-xl ) { margin: 0 -70px; }
+            @include respond-to( $bp-xxl ) { margin: 0 -90px; }
+            @include padding-side( 20px, 0 );
+                    
+            background: url(../img/bg-post-list.png) top center no-repeat;
+        }
+        
+        .article-cards {
+            .entry {
+                padding: 30px 0;
+                &:nth-child( 2 ) .entry-thumbnail, &:nth-child( 4 ) .entry-thumbnail, &:nth-child( 8 ) .entry-thumbnail {
+                    transform: rotate( 4deg );
+                }
+
+                &:nth-child( 3 ) .entry-thumbnail, &:nth-child( 5 ) .entry-thumbnail, &:nth-child( 7 ) .entry-thumbnail {
+                    transform: rotate( 2deg );
+                }
+
+                .entry-thumbnail {
+                    border: 30px solid white;
+                    border-bottom-width: 60px;
+                    box-shadow: 0 0 25px rgba( black, .2 );
+                    transform: rotate( -2deg );
+
+                    img {
+                        display: block;
+                    }
+                }
+
+                .btn {
+                    font-size: 1em;
+                }
+            }
+
+            .entry-inner {
+                padding: 30px 0 0;
+
+                h4 {
+                    @include font-bold;
+                }
+
+                .post-date {
+                    display: none;
+                }
+            }
+
+            @include respond-to( $bp-s ) {
+                display: flex;
+
+                .entry {
+                    flex: 1 1 0;    
+                    margin-right: 3%;
+                    padding: 10px 0 30px;
+
+                    .entry-inner {
+                        padding: 30px 0 0;
+
+                        h4 {
+                            @include font-bold;
+                        }
+
+                        p {
+                            font-size: .8em;
+                            line-height: 1.6em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

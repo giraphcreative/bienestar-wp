@@ -1,0 +1,56 @@
+
+
+.blockquote {
+    @include padding;
+    color: white;
+
+    &.image {
+        text-align: center;
+        padding: 60px 30px;
+
+        @include respond-to( $bp-m ) {
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        @include respond-to( $bp-l ) {
+            padding: 100px 160px;
+        }
+    }
+
+    &.grey {
+        background-color: $grey;
+        color: white;
+    }
+    
+    .column-image {
+        flex: 1;
+        flex-basis: 33.3333%;
+        padding-right: 3.3333%;
+        margin-right: 0;
+    }
+
+    .column-content {
+        flex: 1;
+        flex-basis: 66.6666%;
+    }
+
+    p {
+        color: rgba( white, .7 );
+        padding: 6px 0 0 0;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    h3, h4 {
+        font-size: 1.2em;
+    }
+}
+

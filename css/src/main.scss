@@ -1,0 +1,36 @@
+
+
+// set colors
+$green: #38914a;
+$grey: #868686;
+$grey-light: #999999;
+$grey-dark: #444444;
+$cyan: #2fadde;
+$sea: #034e67;
+$lime: #c6d552;
+
+
+
+// breakpoints
+$bp-s: 600px;
+$bp-m: 768px;
+$bp-l: 1024px;
+$bp-xl: 1150px;
+$bp-xxl: 1440px;
+
+
+// import all the things
+@import "mixins", "fonts", "reset", "button", "base", "grid", "form";
+
+
+// import layout components
+@import "header", "content", "sidebar", "footer";
+
+
+// import the component styles
+@import "component-header", "component-floating-buttons", "component-blockquote", "component-icons", "component-icon-boxes", "component-separator", "component-content-area", "component-content-two", "component-accordions", "component-post-list", "component-slides", "component-spacer";
+
+
+// import lightbox styles
+@import "magnific";
+

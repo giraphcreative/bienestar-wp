@@ -1,0 +1,157 @@
+
+
+.icons-container {
+    background:  url(../img/bg-topo-grey.png) center center / cover no-repeat;
+    background-attachment: fixed;
+    @include padding;
+}
+
+.icons-intro {
+    @extend .content-style;
+}
+
+.icons-after {
+    @extend .content-style;
+    padding-top: 20px;
+}
+
+.icons {
+
+    @include respond-to( 450px ) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -3%;
+    }
+
+    @include respond-to( $bp-l ) {
+        flex-wrap: nowrap;
+    }
+
+    .icon {
+        padding: 0;
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 70px;
+
+        a {
+            display: block;
+        }
+        
+        .icon-image {
+            position: relative;
+
+            img {
+                display: block;
+            }
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        h4 {
+            @include font-bold;
+            font-size: 1.2em;
+            letter-spacing: -1px;
+        }
+
+        .icon-button {
+            padding: 12px 10px;
+            @include font-bold;
+            font-size: 1.1em;
+            letter-spacing: -1px;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+     
+            &:hover {
+                text-decoration: none;
+            }
+           
+            // button colors
+            background: $sea;
+            color: white;
+            &:before {
+                position: absolute;
+                content: '';
+                top: -10px;
+                left: 0;
+                height: 10px;
+                width: 100%;
+                background: url(../img/border-sea-top.png) top center / cover no-repeat;    
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                bottom: -10px;
+                left: 0;
+                height: 10px;
+                width: 100%;
+                background: url(../img/border-sea-bottom.png) top center / cover no-repeat;
+            }
+        }
+           
+        &.cyan .icon-button {
+            // button colors
+            background: $cyan;
+            color: white;
+            &:before {
+                background: url(../img/border-cyan-top.png) top center / cover no-repeat;    
+            }
+            &:after {
+                background: url(../img/border-cyan-bottom.png) top center / cover no-repeat;
+            }
+        }
+       
+        &.lime .icon-button {
+            // button colors
+            background: $lime;
+            color: $sea;
+            &:before {
+                background: url(../img/border-lime-top.png) top center / cover no-repeat;    
+            }
+            &:after {
+                background: url(../img/border-lime-bottom.png) top center / cover no-repeat;
+            }
+        }
+       
+        &.grey .icon-button {
+            // button colors
+            background: $grey;
+            color: white;
+            &:before {
+                background: url(../img/border-grey-top.png) top center / cover no-repeat;    
+            }
+            &:after {
+                background: url(../img/border-grey-bottom.png) top center / cover no-repeat;
+            }
+        }
+
+        @include respond-to( 450px ) {
+            flex: 1;
+            flex-basis: 47%;
+            margin-right: 3%;
+            margin-bottom: 3%;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        @include respond-to( $bp-m ) {
+            flex-basis: 30.3333%;
+        }
+
+        @include respond-to( $bp-l ) {
+            flex-basis: 0px;
+            margin-bottom: 10px;
+        }
+    }
+}
+

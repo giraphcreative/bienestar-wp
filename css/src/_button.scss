@@ -67,5 +67,11 @@
 		&:before { background-image: url(../img/border-cyan-top.png); }
 		&:after { background-image: url(../img/border-cyan-bottom.png); }
 	}
+
+	&.purple {
+		background-color: $purple;
+		&:before { background-image: url(../img/border-purple-top.png); }
+		&:after { background-image: url(../img/border-purple-bottom.png); }
+	}
 }
 

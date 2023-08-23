@@ -11,8 +11,74 @@
         color: rgba( black, .6 );
     }
 
+    &.topo-white {
+        background: $sea url(../img/bg-topo-white.png) top center / cover no-repeat;
+        background-attachment: fixed;
+        @include padding-side( 50px, 70px );
+        color: white;
+
+        p.quiet {
+            color: rgba( white, .6 );
+        }
+    }
+
+    &.topo-white-grey {
+        background: $grey url(../img/bg-topo-white.png) top center / cover no-repeat;
+        background-attachment: fixed;
+        @include padding-side( 50px, 70px );
+        color: white;
+
+        p.quiet {
+            color: rgba( white, .6 );
+        }
+    }
+
+    &.topo-cyan {
+        background: $cyan url(../img/bg-topo-white.png) top center / cover no-repeat;
+        background-attachment: fixed;
+        @include padding-side( 50px, 70px );
+        color: $sea;
+
+        p.quiet {
+            color: rgba( $sea, .6 );
+        }
+    }
+
+    &.topo-sea {
+        background: $sea url(../img/bg-topo-white.png) top center / cover no-repeat;
+        background-attachment: fixed;
+        @include padding-side( 50px, 70px );
+        color: white;
+
+        p.quiet {
+            color: rgba( white, .6 );
+        }
+    }
+
+    &.topo-lime {
+        background: $lime url(../img/bg-topo-grey.png) top center / cover no-repeat;
+        background-attachment: fixed;
+        @include padding-side( 50px, 70px );
+        color: $sea;
+
+        p.quiet {
+            color: rgba( $sea, .6 );
+        }
+    }
+    
+    &.topo-purple {
+        background: $purple url(../img/bg-topo-white.png) top center / cover no-repeat;
+        background-attachment: fixed;
+        @include padding-side( 50px, 70px );
+        color: white;
+
+        p.quiet {
+            color: rgba( white, .6 );
+        }
+    }
+
     &.after-slides {
-        background: url(../img/bg-after-slider-blue-green.png) top center / cover no-repeat;
+        background: url(../img/bg-after-slider-cyan-lime.png) top center / cover no-repeat;
         background-attachment: initial;
         color: white;
         @include padding-side( 160px, 80px );
@@ -40,26 +106,25 @@
         }
     }
 
-    &.topo-white {
-        background: $sea url(../img/bg-topo-white.png) top center / cover no-repeat;
-        background-attachment: fixed;
-        @include padding-side( 50px, 70px );
-        color: white;
-
-        p.quiet {
-            color: rgba( white, .6 );
-        }
+    &.after-slides.lime-cyan {
+        background: url(../img/bg-after-slider-lime-cyan.png) top center / cover no-repeat;
     }
 
-    &.topo-white-grey {
-        background: $grey url(../img/bg-topo-white.png) top center / cover no-repeat;
-        background-attachment: fixed;
-        @include padding-side( 50px, 70px );
-        color: white;
+    &.after-slides.grey-lime {
+        background: url(../img/bg-after-slider-grey-lime.png) top center / cover no-repeat;
+    }
 
-        p.quiet {
-            color: rgba( white, .6 );
-        }
+    &.after-slides.topo-cyan {
+        background: url(../img/bg-after-slider-topo-cyan.png) top center / cover no-repeat;
+    }
+
+    &.after-slides.topo-lime {
+        background: url(../img/bg-after-slider-topo-lime.png) top center / cover no-repeat;
+        color: $sea;
+    }
+
+    &.after-slides.topo-purple {
+        background: url(../img/bg-after-slider-topo-purple.png) top center / cover no-repeat;
     }
 
     &.before-footer {

@@ -43,6 +43,16 @@
             top: 0;
             bottom: 0;
             background: center center / cover no-repeat;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 50%;
+                background: linear-gradient( 90deg, rgba( rgba(0, 0, 0, 0.333), .5 ) 50%, transparent 100% );
+            }
         }
 
         &.visible {
@@ -80,7 +90,7 @@
             }
         
             @include respond-to( $bp-xl ) {
-                right: 45%;
+                right: 40%;
                 padding: 40px 60px 40px 90px;
             }
 
@@ -95,7 +105,7 @@
             h1, h2, h3 {
                 @include font-bold;
                 font-size: 1.8em;
-                line-height: .85em;
+                line-height: 1em;
                 text-transform: uppercase;
                 color: white;
                 text-shadow: 0 0 10px rgba( black, .8 );
@@ -105,11 +115,11 @@
                 }
 
                 @include respond-to( $bp-l ) {
-                    font-size: 3.4em;
+                    font-size: 3em;
                 }
 
                 @include respond-to( $bp-xl ) {
-                    font-size: 4em;
+                    font-size: 3.4em;
                 }
             }
 

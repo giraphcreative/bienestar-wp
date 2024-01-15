@@ -65,6 +65,13 @@
 			color: $sea;
 			&:before { background: url(../img/border-lime-top.png) top center / cover no-repeat; }
 			&:after { background: url(../img/border-lime-bottom.png) top center / cover no-repeat; }
+		}		
+
+		&.purple {
+			background: $purple;
+			color: white;
+			&:before { background: url(../img/border-purple-top.png) top center / cover no-repeat; }
+			&:after { background: url(../img/border-purple-bottom.png) top center / cover no-repeat; }
 		}
 	}
 

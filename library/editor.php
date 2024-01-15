@@ -48,6 +48,11 @@ function my_wpeditor_formats_options( $settings ){
             'classes' => 'grey',
         ),
         array(
+            'title'   => 'Heading 2 (Purple)',
+            'block'   => 'h2',
+            'classes' => 'purple',
+        ),
+        array(
             'title'   => 'Heading 3',
             'block'   => 'h3',
         ),

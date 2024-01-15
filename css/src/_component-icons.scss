@@ -109,6 +109,18 @@
             }
         }
        
+        &.purple .icon-button {
+            // button colors
+            background: $purple;
+            color: white;
+            &:before {
+                background: url(../img/border-purple-top.png) top center / cover no-repeat;    
+            }
+            &:after {
+                background: url(../img/border-purple-bottom.png) top center / cover no-repeat;
+            }
+        }
+       
         &.lime .icon-button {
             // button colors
             background: $lime;

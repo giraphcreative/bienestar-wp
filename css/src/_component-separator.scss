@@ -51,7 +51,13 @@
     &.sea {
         background: $sea;
         &:before { background-image: url(../img/border-sea-top.png); }
-        &:after { background-image: url(../img/border-sea-bottom.png); }
+        &:after { background-image: url(../i``mg/border-sea-bottom.png); }
+    }
+
+    &.purple {
+        background: $purple;
+        &:before { background-image: url(../img/border-purple-top.png); }
+        &:after { background-image: url(../i``mg/border-purple-bottom.png); }
     }
 }
 

@@ -2,11 +2,12 @@
 
 .page-header {
     position: relative;
+    z-index: 0;
     background: center center / cover no-repeat;
     height: 350px;
 
     @include respond-to( $bp-m ) {
-        height: 450px;
+        height: 350px;
         background: right center / contain no-repeat;
     }
 
@@ -24,29 +25,50 @@
         @include padding;
 
         background: $grey;
-        background: linear-gradient( 90deg, rgba( $grey, 1 ) 0%, rgba( $grey, 1 ) 50%, rgba( $grey, .3 ) 100% );
+        background: linear-gradient( 90deg, rgba( $grey, 1 ) 0%, rgba( $grey, 1 ) 70%, rgba( $grey, .3 ) 100% );
 
         .page-header-content-inner {
             flex: 1;
         }
 
+        &.sea {
+            background: $sea;
+            background: linear-gradient( 90deg, rgba( $sea, 1 ) 0%, rgba( $sea, 1 ) 70%, rgba( $sea, .3 ) 100% );    
+        }
+
+        &.cyan {
+            background: $cyan;
+            background: linear-gradient( 90deg, rgba( $cyan, 1 ) 0%, rgba( $cyan, 1 ) 70%, rgba( $cyan, .3 ) 100% );    
+        }
+
+        &.lime {
+            background: $lime;
+            background: linear-gradient( 90deg, rgba( $lime, 1 ) 0%, rgba( $lime, 1 ) 70%, rgba( $lime, .3 ) 100% );    
+        }
+
+        &.purple {
+            background: $purple;
+            background: linear-gradient( 90deg, rgba( $purple, 1 ) 0%, rgba( $purple, 1 ) 70%, rgba( $purple, .3 ) 100% );    
+        }
+
         h1 {
-            font-weight: normal;
-            font-size: 3.5em;
-            line-height: 1.3em;
+            @include font-bold;
+            font-size: 1.8em;
+            line-height: 1em;
             text-transform: uppercase;
             color: white;
+            text-shadow: 0 0 10px rgba( black, .8 );
 
             @include respond-to( $bp-m ) {
-                font-size: 4.5em;
+                font-size: 2.2em;
             }
 
             @include respond-to( $bp-l ) {
-                font-size: 6em;
+                font-size: 3em;
             }
 
             @include respond-to( $bp-xl ) {
-                font-size: 7em;
+                font-size: 4em;
             }
         }
     }

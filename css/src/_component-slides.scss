@@ -8,24 +8,6 @@
     @include respond-to( $bp-l ) { height: 650px; }
     @include respond-to( $bp-xl ) { height: 650px; }
     
-    /*
-    &:before {
-        content: "";
-        background: url(../img/border.svg) center center / cover no-repeat;
-        height: 15px;
-        width: 100%;
-        position: absolute;
-        top: -10px;
-        left: 0;
-        z-index: 1001;
-
-        @include respond-to( $bp-l ) {
-            height: 25px;
-            top: -15px;
-        }
-    }
-    */
-    
     .slide {
         position: absolute;
         top: 0;

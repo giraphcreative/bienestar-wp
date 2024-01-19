@@ -9,14 +9,16 @@
     .accordions-inner {
         .accordion {
             position: relative;
+            margin-top: 5px;
 
             &:before {
                 position: absolute;
-                top: 25px;
+                top: 22px;
                 right: 20px;
-                font-size: 3em;
+                font-size: 2em;
                 content: '\000BB';
                 font-weight: bold;
+                @include font-bold;
                 color: white;
                 z-index: 1;
                 transition: transform 300ms ease-in-out;
@@ -24,7 +26,7 @@
                 pointer-events: none;
 
                 @include respond-to( $bp-m ) {
-                    top: 27px;
+                    top: 24px;
                     right: 30px;
                 }
 
@@ -42,21 +44,41 @@
                 transform: rotate( 90deg );
             }
 
-            &:first-child .accordion-title {
-
-            }
-
             .accordion-title {
                 font-weight: normal;
                 position: relative;                
                 color: white;
-                font-size: 2em;
+                @include font-bold;
+                font-size: 1.4em;
+                line-height: 1.3em;
                 text-transform: uppercase;
                 letter-spacing: .5px;
                 cursor: pointer;
-                @include padding-side( 15px, 25px );
+                @include padding-side( 20px, 25px );
                 padding-right: 50px;
                 background: $grey;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: 10px;
+                    top: -10px;
+                    left: 0;
+                    width: 100%;
+                    background: url(../img/border-grey-top.png) top center / cover no-repeat;
+                    z-index: 2000;
+                }
+            
+                &:after {
+                    position: absolute;
+                    content: "";
+                    height: 10px;
+                    bottom: -10px;
+                    left: 0;
+                    width: 100%;
+                    background: url(../img/border-grey-bottom.png) bottom center / cover no-repeat;
+                    z-index: 2000;
+                }
             }
 
             .accordion-content {
@@ -66,89 +88,51 @@
             }
 
             &.open {
-                .accordion-title {
-                    &:before {
-                        content: '-';
-                    }
-                }
-
                 .accordion-content {
                     //display: block;
                 }
             }
-            /*
-            &.navy {
+
+            &.sea {
                 .accordion-title {
-                    background: $navy;
-                    @include border-top( $navy-light, 1, 0 );
-                    @include border-bottom( $navy-light, 3, 0 );
+                    background: $sea;
+                    &:before { background-image: url(../img/border-sea-top.png); }
+                    &:after { background-image: url(../img/border-sea-bottom.png); }
                 }
             }
 
-            &.navy-light {
+            &.cyan {
                 .accordion-title {
-                    background: $navy-light;
-                    @include border-top( $navy, 2, 0 );
-                    @include border-bottom( $navy, 1, 0 );
+                    background: $cyan;
+                    &:before { background-image: url(../img/border-cyan-top.png); }
+                    &:after { background-image: url(../img/border-cyan-bottom.png); }
                 }
             }
 
-            &.teal {
+            &.lime {
                 .accordion-title {
-                    background: $teal;
-                    @include border-top( $teal-light, 2, 0 );
-                    @include border-bottom( $teal-light, 4, 0 );
-                }
-            }
-
-            &.teal-light {
-                .accordion-title {
-                    background: $teal-light;
-                    @include border-top( $teal, 2, 0 );
-                    @include border-bottom( $teal, 1, 0 );
+                    background: $lime;
+                    &:before { background-image: url(../img/border-lime-top.png); }
+                    &:after { background-image: url(../img/border-lime-bottom.png); }
                 }
             }
 
             &.purple {
                 .accordion-title {
                     background: $purple;
-                    @include border-top( $purple-light, 1, 0 );
-                    @include border-bottom( $purple-light, 3, 0 );
+                    &:before { background-image: url(../img/border-purple-top.png); }
+                    &:after { background-image: url(../img/border-purple-bottom.png); }
                 }
             }
 
-            &.purple-light {
+            &.grey {
                 .accordion-title {
-                    background: $purple-light;
-                    @include border-top( $purple, 3, 0 );
-                    @include border-bottom( $purple, 1, 0 );
+                    background: $grey;
+                    &:before { background-image: url(../img/border-grey-top.png); }
+                    &:after { background-image: url(../img/border-grey-bottom.png); }
                 }
             }
 
-            &.green {
-                .accordion-title {
-                    background: $green;
-                    @include border-top( $green-light, 3, 0 );
-                    @include border-bottom( $green-light, 2, 0 );
-                }
-            }
-
-            &.green-light {
-                .accordion-title {
-                    background: $green-light;
-                    @include border-top( $green, 2, 0 );
-                    @include border-bottom( $green, 3, 0 );
-                }
-            }
-
-            &.grey-light {
-                .accordion-title {
-                    background: $grey-light;
-                    @include border-top( $grey, 4, 0 );
-                    @include border-bottom( $grey, 1, 0 );
-                }
-            }
-            */
         }
     }
 }

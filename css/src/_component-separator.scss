@@ -4,7 +4,7 @@
     height: 0px;
     background: $grey;
     position: relative;
-    z-index: 1999;
+    z-index: 2000;
 
     &.medium {
         height: 15px;
@@ -51,7 +51,7 @@
     &.sea {
         background: $sea;
         &:before { background-image: url(../img/border-sea-top.png); }
-        &:after { background-image: url(../i``mg/border-sea-bottom.png); }
+        &:after { background-image: url(../img/border-sea-bottom.png); }
     }
 
     &.purple {

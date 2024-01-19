@@ -18,18 +18,16 @@
             @include respond-to( $bp-xl ) { margin: 0 -70px; }
             @include respond-to( $bp-xxl ) { margin: 0 -90px; }
             @include padding-side( 20px, 0 );
-                    
-            background: url(../img/bg-post-list.png) top center no-repeat;
         }
         
         .article-cards {
             .entry {
                 padding: 30px 0;
-                &:nth-child( 2 ) .entry-thumbnail, &:nth-child( 4 ) .entry-thumbnail, &:nth-child( 8 ) .entry-thumbnail {
+                &:nth-child( 2 ) .entry-thumbnail, &:nth-child( 4 ) .entry-thumbnail, &:nth-child( 8 ) .entry-thumbnail, &:nth-child( 10 ) .entry-thumbnail, &:nth-child( 12 ) .entry-thumbnail {
                     transform: rotate( 4deg );
                 }
 
-                &:nth-child( 3 ) .entry-thumbnail, &:nth-child( 5 ) .entry-thumbnail, &:nth-child( 7 ) .entry-thumbnail {
+                &:nth-child( 3 ) .entry-thumbnail, &:nth-child( 5 ) .entry-thumbnail, &:nth-child( 7 ) .entry-thumbnail, &:nth-child( 9 ) .entry-thumbnail, &:nth-child( 11 ) .entry-thumbnail {
                     transform: rotate( 2deg );
                 }
 

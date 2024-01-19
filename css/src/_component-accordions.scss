@@ -85,6 +85,8 @@
                 @include padding-side( 25px, 35px );
                 @extend .content-style;
                 display: none;
+                background: white url(../img/bg-topo-grey.png) top center / cover no-repeat;
+                background-attachment: fixed;
             }
 
             &.open {

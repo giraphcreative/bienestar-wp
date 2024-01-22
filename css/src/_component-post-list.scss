@@ -61,10 +61,12 @@
 
             @include respond-to( $bp-s ) {
                 display: flex;
+                flex-wrap: wrap;
+                margin-right: -5%;
 
                 .entry {
-                    flex: 1 1 0;    
-                    margin-right: 3%;
+                    flex: 1 1 45%;    
+                    margin-right: 5%;
                     padding: 10px 0 30px;
 
                     .entry-inner {
@@ -79,6 +81,16 @@
                             line-height: 1.6em;
                         }
                     }
+                }
+            }
+
+            @include respond-to( $bp-m ) {
+                display: flex;
+                flex-wrap: wrap;
+
+                .entry {
+                    flex: 1 1 28.3333%; 
+                    margin-right: 5%;
                 }
             }
         }

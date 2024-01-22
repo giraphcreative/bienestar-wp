@@ -9,12 +9,15 @@ the_showcase();
 
 ?>
 
-	<div class="content-wide" role="main">
+	<div class="separator sea medium"></div>
+	<div class="content-area before-footer" role="main">
 		<?php 
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); 
 				?>
-				<h1><?php the_title(); ?></h1>
+				<div class="post-list-title">
+					<h2 class="lime"><?php the_title(); ?></h2>
+				</div>
 				<?php
 				the_content();
 			endwhile;

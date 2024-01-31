@@ -62,10 +62,11 @@
             @include respond-to( $bp-s ) {
                 display: flex;
                 flex-wrap: wrap;
+                flex-grow: 0;
                 margin-right: -5%;
 
                 .entry {
-                    flex: 1 1 45%;    
+                    flex: 0 1 45%;
                     margin-right: 5%;
                     padding: 10px 0 30px;
 
@@ -89,7 +90,7 @@
                 flex-wrap: wrap;
 
                 .entry {
-                    flex: 1 1 28.3333%; 
+                    flex: 0 1 28.3333%; 
                     margin-right: 5%;
                 }
             }

@@ -77,6 +77,14 @@ jQuery(document).ready(function($){
 			}, 500 );
 
 
+			// slide click handler
+			showcase.find( '.slide' ).click(function(){
+				if ( $(this).hasClass( 'has-link' ) ) {
+					location.href = $(this).data('href');
+				}
+			});
+
+
 			// next/previous click
 			showcase.find( '.slides-nav a' ).click(function(){
 				if ( $(this).hasClass( 'previous' ) ) {

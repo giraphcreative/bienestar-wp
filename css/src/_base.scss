@@ -60,11 +60,15 @@ strong {
 }
 
 a {
-	color: $cyan;
+	color: $sea;
 	text-decoration: none;
 
 	&:hover {
-		text-decoration: underline;
+		border-bottom: 1px dotted $sea;
+
+		img {
+			border-bottom: none;
+		}
 	}
 }
 

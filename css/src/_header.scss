@@ -6,6 +6,10 @@ header {
 	.logo {
 		padding: 30px 70px 25px 20px;
 
+		a:hover {
+			border: none;
+		}
+
 		@include respond-to( $bp-m ) {
 			padding: 50px 80px 30px 30px;
 		}

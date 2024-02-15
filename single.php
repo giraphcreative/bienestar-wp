@@ -20,9 +20,12 @@ the_showcase();
 				</div>
 				<?php
 				the_content();
+				?>
+				<?php
 			endwhile;
 		endif;
 		?>
+		<div class="post-navigation"><?php print str_replace( 'rel="prev">', 'rel="prev" class="prev btn cyan">&laquo; ', get_previous_post_link( '%link' ) ); ?> <?php print str_replace( 'rel="next"', 'rel="next" class="next btn cyan"', str_replace( '</a>', ' &raquo;</a>', get_next_post_link( '%link' ) ) ); ?></div>
 	</div>
 
 <?php

@@ -176,3 +176,26 @@
 	}
 }
 
+.post-navigation {
+	@include clearfix;
+	@include respond-to( $bp-m ) {
+		padding: 20px 0 30px;
+	}
+
+	.btn {
+		display: block;
+		margin-top: 20px;
+
+		&.prev {
+			@include respond-to( $bp-m ) {
+				float: left;
+			}
+		}
+
+		&.next {
+			@include respond-to( $bp-m ) {
+				float: right;
+			}
+		}
+	}
+}

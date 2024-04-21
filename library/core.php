@@ -82,12 +82,16 @@ if ( languages_enabled() ) {
 	foreach ( $languages as $language ) {
 		// register only the main menu
 		register_nav_menus( array( 'main-' . $language['abbreviation'] => 'Main (' . $language['name'] . ')' ) );
+
+		// register only the footer menu
+		register_nav_menus( array( 'footer-' . $language['abbreviation'] => 'Footer (' . $language['name'] . ')' ) );
 	}
 
 } else {
 
-	// register only the main menu
+	// register main and footer menus for no-languages
 	register_nav_menus( array( 'main' => 'Main' ) );
+	qqqqqqqqqqqqqqregister_nav_menus( array( 'main' => 'Main' ) );
 
 }
 

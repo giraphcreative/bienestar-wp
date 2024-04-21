@@ -26,10 +26,10 @@ $admin_email = get_option( 'admin_email' );
 				// if we have a default language
 				if ( get_default_language() ) {
 					// check the url for a language string, and output that menu
-					wp_nav_menu( array( 'theme_location' => 'main-' . get_current_language() , 'menu_class' => 'nav-menu' ) );
+					wp_nav_menu( array( 'theme_location' => 'footer-' . get_current_language() , 'menu_class' => 'nav-menu' ) );
 				} else {
 					// display the default menu
-					wp_nav_menu( array( 'theme_location' => 'main', 'menu_class' => 'nav-menu' ) );
+					wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'nav-menu' ) );
 				}
 				?>
 				</div>

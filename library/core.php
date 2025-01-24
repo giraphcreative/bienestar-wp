@@ -91,7 +91,7 @@ if ( languages_enabled() ) {
 
 	// register main and footer menus for no-languages
 	register_nav_menus( array( 'main' => 'Main' ) );
-	qqqqqqqqqqqqqqregister_nav_menus( array( 'main' => 'Main' ) );
+	register_nav_menus( array( 'footer' => 'Footer' ) );
 
 }
 
